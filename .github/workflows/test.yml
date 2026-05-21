@@ -23,23 +23,43 @@ jobs:
 
       - name: Check secrets are configured
         env:
-          MY_EMAIL: ${{ secrets.MY_EMAIL }}
-          MY_PASSWORD: ${{ secrets.MY_PASSWORD }}
+          api_key: ${{ secrets.OWM_API_KEY }}
+          account_sid: ${{ secrets.ACCOUNT_SID }}
+          auth_token:  ${{ secrets.AUTH_TOKEN }}
+          to: ${{ secrets.MI_NUM }}
+
+          
         run: |
-          if [ -z "$MY_EMAIL" ]; then
-            echo "MY_EMAIL secret is not set!"
+          if [ -z "$api_key" ]; then
+            echo "api_key secret is not set!"
             echo "Go to Settings > Secrets > Actions and add it."
             exit 1
           else
-            echo "MY_EMAIL is configured"
+            echo "api_key is configured"
           fi
 
-          if [ -z "$MY_PASSWORD" ]; then
-            echo "MY_PASSWORD secret is not set!"
+          if [ -z "$account_sid" ]; then
+            echo "account_sid secret is not set!"
             echo "Go to Settings > Secrets > Actions and add it."
             exit 1
           else
-            echo "MY_PASSWORD is configured"
+            echo "account_sid is configured"
+          fi
+
+           if [ -z "$auth_token" ]; then
+            echo "auth_token secret is not set!"
+            echo "Go to Settings > Secrets > Actions and add it."
+            exit 1
+          else
+            echo "auth_token is configured"
+          fi
+
+           if [ -z "$MI_NUM" ]; then
+            echo "MI_NUM secret is not set!"
+            echo "Go to Settings > Secrets > Actions and add it."
+            exit 1
+          else
+            echo "MI_NUM is configured"
           fi
 
           echo ""
