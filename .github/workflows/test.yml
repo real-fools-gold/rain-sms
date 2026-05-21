@@ -26,7 +26,7 @@ jobs:
           api_key: ${{ secrets.OWM_API_KEY }}
           account_sid: ${{ secrets.ACCOUNT_SID }}
           auth_token:  ${{ secrets.AUTH_TOKEN }}
-          to: ${{ secrets.MI_NUM }}
+          cell_num: ${{ secrets.MI_NUM }}
 
           
         run: |
