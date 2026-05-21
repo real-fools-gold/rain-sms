@@ -6,6 +6,8 @@ OWM_Endpoint = "https://api.openweathermap.org/data/2.5/forecast"
 api_key = os.environ.get("OWM_API_KEY")
 account_sid = os.environ.get("ACCOUNT_SID")
 auth_token = os.environ.get("AUTH_TOKEN")
+cell_num = os.environ.get("MI_NUM")
+
 parameters = {
     "lat": 51.924419,
     "lon": 4.477733,
@@ -29,6 +31,6 @@ if will_rain:
     message = client.messages.create(
         body="Bring an umbrella☔️ today.",
         from_="+19383005382",
-        to=os.environ.get("MI_NUM"),
+        to=cell_num,
     )
     print(message.status)
