@@ -7,8 +7,8 @@ api_key = os.environ.get("API_KEY")
 account_sid = os.environ.get("ACCOUNT_SID")
 auth_token = os.environ.get("AUTH_TOKEN")
 parameters = {
-    "lat": 55.152149,
-    "lon": -3.000510,
+    "lat": 51.924419,
+    "lon": 4.477733,
     "appid": api_key,
     "units": "metric",
     "cnt": 4,
