@@ -54,12 +54,12 @@ jobs:
             echo "auth_token is configured"
           fi
 
-           if [ -z "$MI_NUM" ]; then
-            echo "MI_NUM secret is not set!"
+           if [ -z "$cell_num" ]; then
+            echo "cell_num secret is not set!"
             echo "Go to Settings > Secrets > Actions and add it."
             exit 1
           else
-            echo "MI_NUM is configured"
+            echo "cell_num is configured"
           fi
 
           echo ""
